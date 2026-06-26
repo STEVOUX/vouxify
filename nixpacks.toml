@@ -6,9 +6,14 @@ nixPkgs = ["ffmpeg", "python312", "nodejs_20"]
 
 [phases.install]
 cmds = [
-  "npm ci --omit=dev",
+  "npm ci",
   "pip install yt-dlp --break-system-packages"
 ]
 
+[phases.build]
+cmds = [
+  "npm run build"
+]
+
 [start]
-cmd = "node backend/server.js"
+cmd = "npm run start"
