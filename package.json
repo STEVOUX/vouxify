@@ -1,0 +1,35 @@
+{
+  "name": "vouxify",
+  "version": "3.0.0",
+  "description": "VOUXIFY — Universal Media Downloader by STEVOUX",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1 -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "auth:ig": "node scripts/login-instagram-gui.js",
+    "postinstall": "node -e \"const fs=require('fs');if(fs.existsSync('./scripts/download-yt-dlp.js'))require('./scripts/download-yt-dlp.js');\""
+  },
+  "dependencies": {
+    "archiver": "^6.0.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "instagram-url-direct": "^2.0.7",
+    "ioredis": "^5.11.1",
+    "next": "^15.3.3",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^3.3.2",
+    "p-limit": "^7.3.0",
+    "puppeteer": "^25.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "uuid": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "STEVOUX",
+  "license": "MIT"
+}

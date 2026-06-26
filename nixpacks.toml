@@ -1,0 +1,14 @@
+# nixpacks.toml — Railway build config for VOUXIFY
+# Installs Node.js + FFmpeg + yt-dlp in the Railway environment
+
+[phases.setup]
+nixPkgs = ["ffmpeg", "python312", "nodejs_20"]
+
+[phases.install]
+cmds = [
+  "npm ci --omit=dev",
+  "pip install yt-dlp --break-system-packages"
+]
+
+[start]
+cmd = "node backend/server.js"
